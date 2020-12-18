@@ -35,7 +35,7 @@ public class PerfectoSelenium {
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("useAppiumForWeb", true);
 		try{
-			driver = new RemoteWebDriver(new URL("https://" + Utils.fetchCloudName(cloudName) + ".perfectomobile.com/nexperience/perfectomobile/wd/hub"), capabilities);
+			driver = new RemoteWebDriver(new URL("https://" + Utils.fetchCloudName(cloudName) + ".perfectomobile.com/nexperience/perfectomobile/wd/hub/fast"), capabilities);
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 		}catch(SessionNotCreatedException e){
